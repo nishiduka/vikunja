@@ -5,15 +5,42 @@
 	},
 	"home": {
 		"welcomeNight": "Boa noite, {username}!",
+		"welcomeNightOwl": "Olá, corujão {username}",
+		"welcomeNightBurning": "Trabalhando até tarde, {username}?",
+		"welcomeNightQuiet": "Momento de quietude, {username}",
+		"welcomeNightLate": "Já está tarde, {username}",
+		"welcomeNightMoonlit": "Planejando à luz da lua, {username}?",
 		"welcomeMorning": "Bom dia, {username}!",
-		"welcomeDay": "Olá, {username}!",
+		"welcomeMorningHey": "Ei {username}, pronto para começar?",
+		"welcomeMorningFresh": "Um recomeço, {username}",
+		"welcomeMorningCoffee": "Café e tarefas, {username}?",
+		"welcomeMorningRise": "Acordar e planejar, {username}",
+		"welcomeMorningBack": "Bem-vindo de volta, {username}",
+		"welcomeMondayFresh": "Início de semana, {username}",
+		"welcomeTuesday": "Feliz terça-feira, {username}",
+		"welcomeWednesdayMid": "Já é meio da semana, {username}",
+		"welcomeThursday": "Quase lá, {username}",
+		"welcomeFridayPush": "O último gás de sexta, {username}?",
+		"welcomeSaturday": "Modo fim de semana, {username}",
+		"welcomeSundaySession": "Foco de domingo, {username}?",
+		"welcomeDay": "Oi, {username}!",
+		"welcomeDayBack": "De volta ao trabalho, {username}",
+		"welcomeDayFocus": "Hora de focar, {username}",
+		"welcomeDayKeepGoing": "Continue assim, {username}",
+		"welcomeDayWhatsNext": "O que vem a seguir, {username}?",
+		"welcomeDayGood": "Boa tarde, {username}",
 		"welcomeEvening": "Boa noite, {username}!",
-		"lastViewed": "Visto por último",
-		"addToHomeScreen": "Adicione este aplicativo à sua tela inicial para um acesso mais rápido e melhor experiência.",
-		"goToOverview": "Ir para Visão Geral",
+		"welcomeEveningWind": "Desacelerando, {username}?",
+		"welcomeEveningReturns": "{username} retornou",
+		"welcomeEveningWrap": "Hora de encerrar, {username}?",
+		"welcomeEveningOneMore": "Só mais uma coisa, {username}?",
+		"welcomeEveningStill": "Ainda firme no trabalho, {username}?",
+		"lastViewed": "Últimos visualizados",
+		"addToHomeScreen": "Adicione este aplicativo à sua tela inicial para um acesso mais rápido e uma experiência melhor.",
+		"goToOverview": "Ir para a visão geral",
 		"project": {
 			"importText": "Importe seus projetos e tarefas de outros serviços para o Vikunja:",
-			"import": "Importe seus dados para o Vikunja"
+			"import": "Importar seus dados para o Vikunja"
 		}
 	},
 	"demo": {
@@ -63,24 +90,62 @@
 		},
 		"settings": {
 			"title": "Configurações",
-			"newPasswordTitle": "Atualize Sua Senha",
+			"newPasswordTitle": "Atualizar sua senha",
+			"newPassword": "Nova senha",
+			"currentPassword": "Senha atual",
 			"currentPasswordPlaceholder": "Sua senha atual",
 			"passwordUpdateSuccess": "A senha foi atualizada com sucesso.",
 			"updateEmailTitle": "Atualizar seu endereço de e-mail",
-			"updateEmailSuccess": "Seu endereço de e-mail foi atualizado com sucesso. Nós lhe enviamos um link para confirmar.",
+			"updateEmailNew": "Novo endereço de e-mail",
+			"updateEmailSuccess": "Seu endereço de e-mail foi atualizado com sucesso. Enviamos um link para você confirmá-lo.",
 			"general": {
 				"title": "Configurações Gerais",
+				"name": "Meu nome",
+				"newName": "O novo nome",
 				"savedSuccess": "As configurações foram atualizadas com sucesso.",
-				"overdueReminders": "Envie-me um resumo de minhas tarefas pendentes diariamente",
-				"discoverableByName": "Permitir que outros usuários me adicionem como membro para equipes ou projetos quando pesquisam meu nome",
-				"discoverableByEmail": "Permitir que outros usuários me adicionem como membro de equipes ou projetos quando eles pesquisam meu e-mail completo",
-				"playSoundWhenDone": "Tocar um som ao marcar as tarefas como feitas",
-				"weekStart": "A semana começa em",
+				"emailReminders": "Enviar lembretes de tarefas por e-mail",
+				"overdueReminders": "Enviar diariamente um resumo das minhas tarefas atrasadas e não concluídas",
+				"discoverableByName": "Permitir que outros usuários me adicionem como membro em equipes ou projetos ao buscarem pelo meu nome",
+				"discoverableByEmail": "Permitir que outros usuários me adicionem como membro em equipes ou projetos ao buscarem pelo meu e-mail completo",
+				"playSoundWhenDone": "Reproduzir um som ao marcar tarefas como concluídas",
+				"allowIconChanges": "Exibir logotipos especiais durante determinados períodos",
+				"alwaysShowBucketTaskCount": "Sempre mostrar a contagem de tarefas nas colunas do Kanban",
+				"defaultTaskRelationType": "Tipo de relação de tarefa padrão",
+				"weekStart": "A semana começa no(a)",
 				"weekStartSunday": "Domingo",
 				"weekStartMonday": "Segunda-feira",
+				"weekStartTuesday": "Terça-feira",
+				"weekStartWednesday": "Quarta-feira",
+				"weekStartThursday": "Quinta-feira",
+				"weekStartFriday": "Sexta-feira",
+				"weekStartSaturday": "Sábado",
 				"language": "Idioma",
-				"overdueTasksRemindersTime": "Horário do e-mail de lembrete de tarefas pendentes",
-				"filterUsedOnOverview": "Salvo filtro utilizado na visão geral"
+				"defaultProject": "Projeto padrão",
+				"defaultView": "Visualização padrão",
+				"timezone": "Fuso horário",
+				"overdueTasksRemindersTime": "Horário do e-mail de lembrete de tarefas atrasadas",
+				"quickAddDefaultReminders": "Lembretes padrão para adição rápida",
+				"quickAddDefaultRemindersDescription": "Estes lembretes serão adicionados automaticamente a cada tarefa criada por meio da adição rápida inteligente que possua uma data de vencimento.",
+				"quickAddDefaultRemindersHint": "Adicione um ou mais lembretes relativos à data de vencimento da tarefa. Deixe em branco para desativar.",
+				"filterUsedOnOverview": "Filtro salvo utilizado na página de visão geral",
+				"showLastViewed": "Mostrar os últimos projetos visualizados na página de visão geral",
+				"minimumPriority": "Prioridade mínima visível da tarefa",
+				"dateDisplay": "Formato de exibição da data",
+				"dateDisplayOptions": {
+					"relative": "Relativo (ex: 3 dias atrás)",
+					"mm-dd-yyyy": "MM-DD-AAAA",
+					"dd-mm-yyyy": "DD-MM-AAAA",
+					"yyyy-mm-dd": "AAAA-MM-DD",
+					"mm\/dd\/yyyy": "MM\/DD\/AAAA",
+					"dd\/mm\/yyyy": "DD\/MM\/AAAA",
+					"yyyy\/mm\/dd": "AAAA\/MM\/DD"
+				},
+				"timeFormat": "Formato de hora",
+				"timeFormatOptions": {
+					"12h": "12 horas (AM/PM)",
+					"24h": "24 horas (HH:mm)"
+				},
+				"externalUserNameChange": "Seu nome é gerenciado pelo seu provedor de login ({provider}). Para alterá-lo, por favor, atualize-o diretamente lá."
 			},
 			"totp": {
 				"title": "Autenticação de Dois Fatores",
@@ -277,8 +342,11 @@
 		"list": {
 			"title": "Lista",
 			"add": "Adicionar",
+			"addPlaceholder": "Adicionar uma tarefa…",
 			"empty": "Este projeto está vazio no momento.",
-			"editTask": "Editar Tarefa"
+			"newTaskCta": "Criar uma tarefa.",
+			"editTask": "Editar tarefa",
+			"sort": "Ordenar"
 		},
 		"gantt": {
 			"title": "Gantt",
@@ -360,6 +428,55 @@
 		"edit": {
 			"title": "Editar este filtro salvo",
 			"success": "O filtro foi salvo com sucesso."
+		},
+		"query": {
+			"placeholder": "Digite uma busca ou termo de filtragem…",
+			"help": {
+				"intro": "Para filtrar tarefas, você pode usar uma sintaxe de consulta semelhante ao SQL. Os campos disponíveis para filtragem incluem:",
+				"link": "Como isso funciona?",
+				"canUseDatemath": "Você pode usar expressões matemáticas de data para definir datas relativas. Clique no valor da data em uma consulta para saber mais.",
+				"fields": {
+					"done": "Se a tarefa está concluída ou não",
+					"priority": "O nível de prioridade da tarefa (1-5)",
+					"percentDone": "A porcentagem de conclusão da tarefa (0-100)",
+					"dueDate": "A data de vencimento da tarefa",
+					"startDate": "A data de início da tarefa",
+					"endDate": "A data de término da tarefa",
+					"doneAt": "A data e hora em que a tarefa foi concluída",
+					"assignees": "Os responsáveis pela tarefa",
+					"labels": "As etiquetas associadas à tarefa",
+					"project": "O projeto ao qual a tarefa pertence (disponível apenas para filtros salvos, não no nível do projeto)",
+					"reminders": "Os lembretes da tarefa como um campo de data, retornará todas as tarefas com pelo menos um lembrete correspondente à consulta",
+					"created": "A data e hora em que a tarefa foi criada",
+					"updated": "A data e hora da última alteração na tarefa"
+				},
+				"operators": {
+					"intro": "Os operadores disponíveis para filtragem incluem:",
+					"notEqual": "Diferente de",
+					"equal": "Igual a",
+					"greaterThan": "Maior que",
+					"greaterThanOrEqual": "Maior ou igual a",
+					"lessThan": "Menor que",
+					"lessThanOrEqual": "Menor ou igual a",
+					"like": "Corresponde a um padrão (usando o caractere curinga %)",
+					"in": "Corresponde a qualquer valor em uma lista de valores separados por vírgula",
+					"notIn": "Corresponde a qualquer valor não presente em uma lista de valores separados por vírgula"
+				},
+				"logicalOperators": {
+					"intro": "Para combinar várias condições, você pode usar os seguintes operadores lógicos:",
+					"and": "Operador E (AND), corresponde se todas as condições forem verdadeiras",
+					"or": "Operador OU (OR), corresponde se qualquer uma das condições for verdadeira",
+					"parentheses": "Parênteses para agrupar condições"
+				},
+				"examples": {
+					"intro": "Aqui estão alguns exemplos de consultas de filtro:",
+					"priorityEqual": "Corresponde a tarefas com nível de prioridade 4",
+					"dueDatePast": "Corresponde a tarefas com data de vencimento no passado",
+					"undoneHighPriority": "Corresponde a tarefas não concluídas com nível de prioridade 3 ou superior",
+					"assigneesIn": "Corresponde a tarefas atribuídas a \"user1\" ou \"user2\"",
+					"priorityOneOrTwoPastDue": "Corresponde a tarefas com nível de prioridade 1 ou 2 e com data de vencimento no passado"
+				}
+			}
 		}
 	},
 	"migrate": {

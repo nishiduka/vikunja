@@ -7,7 +7,7 @@ import {AUTH_TYPES} from '@/modelTypes/IUser'
  * Returns the API base URL with a guaranteed trailing slash.
  */
 export function getApiBaseUrl(): string {
-	const url = window.API_URL
+	const url = import.meta.env.VITE_API_URL || window.API_URL
 	return url?.endsWith('/') ? url : url + '/'
 }
 
