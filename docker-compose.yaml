@@ -1,0 +1,48 @@
+services:
+  vikunja:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        RELEASE_VERSION: ${VIKUNJA_RELEASE_VERSION:-dev}
+    image: vikunja-local
+    container_name: vikunja
+    restart: unless-stopped
+    environment:
+      VIKUNJA_SERVICE_PUBLICURL: ${VIKUNJA_SERVICE_PUBLICURL:-http://localhost:3456}
+      VIKUNJA_SERVICE_SECRET: ${VIKUNJA_SERVICE_SECRET:?Defina VIKUNJA_SERVICE_SECRET no arquivo .env}
+      VIKUNJA_DATABASE_TYPE: mysql
+      VIKUNJA_DATABASE_HOST: db
+      VIKUNJA_DATABASE_USER: ${MYSQL_USER:-vikunja}
+      VIKUNJA_DATABASE_PASSWORD: ${MYSQL_PASSWORD:?Defina MYSQL_PASSWORD no arquivo .env}
+      VIKUNJA_DATABASE_DATABASE: ${MYSQL_DATABASE:-vikunja}
+      VIKUNJA_DATABASE_TLS: "false"
+    ports:
+      - "${VIKUNJA_PORT:-3456}:3456"
+    volumes:
+      - vikunja_files:/app/vikunja/files
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: mysql:8.4
+    container_name: vikunja-mysql
+    restart: unless-stopped
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Defina MYSQL_ROOT_PASSWORD no arquivo .env}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-vikunja}
+      MYSQL_USER: ${MYSQL_USER:-vikunja}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?Defina MYSQL_PASSWORD no arquivo .env}
+    volumes:
+      - vikunja_mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u $$MYSQL_USER --password=$$MYSQL_PASSWORD"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+
+volumes:
+  vikunja_files:
+  vikunja_mysql:
